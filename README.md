@@ -1,73 +1,61 @@
-📈 Google Trends Analysis
-This Python project leverages the PyTrends library to analyze Google Trends data for specified search terms. It retrieves interest over time, regional interest, related queries, and keyword suggestions, and visualizes the data using matplotlib. The project is useful for understanding search trends and patterns.
+# 📊 Cloud Computing Trend Analysis with Google Trends
 
-✨ Features
-📊 Interest Over Time: Retrieve and display the search interest of specified terms over the past 12 months and within custom date ranges.
+This project analyzes the popularity and interest in Cloud Computing using Google Trends data, powered by the pytrends API. It visualizes interest over time, identifies top regions, and retrieves related search queries.
 
-🌍 Regional Analysis: Identify and visualize the top regions where the search terms are most popular.
+## 🔧 Features
 
-🔍 Related Queries: Fetch related search queries to understand associated topics and trends.
+- Fetches and analyzes 12 months of Google Trends data for "Cloud Computing".
+- Compares interest for a specific time period (Jan 2024).
+- Identifies the top regions where "Cloud Computing" is most searched.
+- Visualizes data using matplotlib.
+- Retrieves related search queries and keyword suggestions from Google Trends.
 
-💡 Keyword Suggestions: Obtain keyword suggestions related to the specified terms for broader analysis.
+## 🛠 Tools and Libraries Used
 
-📈 Data Visualization: Generate bar charts to represent regional interest, enhancing interpretability.
+- Python 3.7+
+- [Pandas](https://pandas.pydata.org/)
+- [matplotlib](https://matplotlib.org/)
+- [pytrends](https://github.com/GeneralMills/pytrends)
 
-🛠️ Installation
+## 📁 Project Structure
+
+
+cloud-computing-trends/
+├── trend_analysis.py      # Main Python script
+├── requirements.txt       # Dependencies
+└── README.md              # Project documentation
+
+▶️ How to Run
 Clone the Repository
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/google-trends-analysis.git
-cd google-trends-analysis
-Create a Virtual Environment (Optional but Recommended)
-
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+git clone https://github.com/your-username/cloud-computing-trends.git
+cd cloud-computing-trends
 Install Dependencies
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-If requirements.txt is not present, you can install the necessary packages individually:
 
-bash
-Copy
-Edit
-pip install pandas pytrends matplotlib
-🚀 Usage
+pip install -r requirements.txt
 Run the Script
 
-bash
-Copy
-Edit
-python main.py
-Ensure that the script file is named main.py or adjust the command accordingly.
+python trend_analysis.py
 
-Understand the Output
 
-The script will print the top 10 time periods with the highest interest in the specified search terms over the past 12 months.
+✅ Requirements
+Python 3.7 or above
 
-It will also display the top 10 periods within the specified date range.
+Active internet connection (to access Google Trends)
 
-A bar chart will be displayed, showing the top 10 regions with the highest interest.
+Required packages listed in requirements.txt:
 
-Related search queries and keyword suggestions will be printed in the console.
+nginx
 
-📁 Project Structure
-css
-Copy
-Edit
-google-trends-analysis/
-├── main.py
-├── requirements.txt
-├── README.md
-└── outputs/
-    ├── interest_over_time.csv
-    ├── interest_by_region.csv
-    └── region_interest_chart.png
-📄 License
+pandas
+matplotlib
+pytrends
+
+
+📌 Notes
+Add a short delay (time.sleep) after payload requests to avoid being rate-limited by Google Trends.
+
+The pytrends module is unofficial and may occasionally break due to changes in the Google Trends site.
+
+The script uses matplotlib for visualizing interest by region in bar chart format.
